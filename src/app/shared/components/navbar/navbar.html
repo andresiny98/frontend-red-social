@@ -1,0 +1,13 @@
+@if (authStore.isAuthenticated()) {
+  <nav class="navbar navbar-expand navbar-dark bg-dark px-3">
+    <a class="navbar-brand" routerLink="/posts">Red Social</a>
+    <div class="navbar-nav">
+      <a class="nav-link" routerLink="/posts" routerLinkActive="active">Publicaciones</a>
+      <a class="nav-link" routerLink="/profile" routerLinkActive="active">Perfil</a>
+    </div>
+    <div class="ms-auto d-flex align-items-center">
+      <span class="text-light small me-3">{{ authStore.user()?.alias }}</span>
+      <button type="button" class="btn btn-outline-light btn-sm" (click)="logout()">Salir</button>
+    </div>
+  </nav>
+}

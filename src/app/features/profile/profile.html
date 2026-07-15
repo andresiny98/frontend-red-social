@@ -1,0 +1,23 @@
+@if (authStore.user(); as user) {
+  <div class="container py-4">
+    <div class="card shadow-sm mx-auto profile-card">
+      <div class="card-body p-4">
+        <h1 class="h4 mb-4">Perfil</h1>
+
+        <dl class="row mb-0">
+          <dt class="col-sm-4">Nombres</dt>
+          <dd class="col-sm-8">{{ user.firstName }}</dd>
+
+          <dt class="col-sm-4">Apellidos</dt>
+          <dd class="col-sm-8">{{ user.lastName }}</dd>
+
+          <dt class="col-sm-4">Fecha de nacimiento</dt>
+          <dd class="col-sm-8">{{ user.birthDate | date: 'longDate' }}</dd>
+
+          <dt class="col-sm-4">Alias</dt>
+          <dd class="col-sm-8">{{ user.alias }}</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+}

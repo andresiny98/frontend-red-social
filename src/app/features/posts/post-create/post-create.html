@@ -1,0 +1,12 @@
+<div class="card shadow-sm mb-4">
+  <div class="card-body">
+    <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
+      <div class="mb-2">
+        <label for="message" class="form-label">Nueva publicación</label>
+        <textarea id="message" class="form-control" rows="3" formControlName="message"
+          placeholder="¿Qué estás pensando?"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Publicar</button>
+    </form>
+  </div>
+</div>

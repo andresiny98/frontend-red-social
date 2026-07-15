@@ -1,0 +1,17 @@
+<div class="container py-4 post-list-wrapper">
+  <app-post-create />
+
+  @if (error()) {
+  <div class="alert alert-danger">{{ error() }}</div>
+  }
+
+  @if (loading()) {
+  <p class="text-muted">Cargando publicaciones...</p>
+  } @else if (postsStore.posts().length === 0) {
+  <p class="text-muted">Todavía no hay publicaciones.</p>
+  } @else {
+  @for (post of postsStore.posts(); track post.id) {
+  <app-post-item [post]="post" />
+  }
+  }
+</div>
