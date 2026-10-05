@@ -1,4 +1,4 @@
-# Red Social — Prueba Técnica (Frontend Angular)
+# Red Social — (Frontend Angular)
 
 Frontend en Angular 20 (NgModules, sin componentes standalone) para una red social, con
 autenticación, perfil, publicaciones y likes en tiempo real. Apunta al backend real
